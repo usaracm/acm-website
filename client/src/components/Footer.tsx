@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useInView } from "framer-motion";
-import { Instagram, Linkedin, Twitter, Mail, ArrowUpRight, Youtube } from "lucide-react";
+import { Instagram, Linkedin, Twitter, Mail, ArrowUpRight, Youtube, Github } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { useRef } from "react";
@@ -11,6 +11,7 @@ const SOCIAL_LINKS = [
   { icon: Instagram, href: "https://instagram.com/usaracm", label: "Instagram" },
   { icon: Twitter, href: "https://x.com/usaracm", label: "X" },
   { icon: Youtube, href: "https://www.youtube.com/@usaracm", label: "YouTube" },
+  { icon: Github, href: "https://github.com/usaracm", label: "GitHub" },
 ];
 
 const FOOTER_LINKS = [
