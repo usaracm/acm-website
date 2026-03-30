@@ -4,7 +4,7 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowUpRight, MapPin, Users, Zap, Clock } from "lucide-react";
+import { ArrowUpRight, MapPin, Users, Zap } from "lucide-react";
 import { eventsData, EventData } from "@/data/eventsData";
 
 interface EventCardProps {
@@ -42,7 +42,7 @@ function EventCard({ event, index }: EventCardProps) {
           <div className="absolute bottom-0 right-0 w-6 h-6 border-r-2 border-b-2 border-white/10 group-hover:border-acm-blue/40 transition-colors duration-500 z-10" />
           {/* Left/Right: Event Info */}
           <div className="flex-1 flex flex-col justify-center">
-            {/* Category & Date */}
+            {/* Category */}
             <div className="flex flex-wrap items-center gap-4 mb-4">
               <span
                 className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-[10px] font-semibold tracking-wider uppercase"
@@ -54,13 +54,6 @@ function EventCard({ event, index }: EventCardProps) {
               >
                 <Zap className="w-3 h-3" />
                 {event.category}
-              </span>
-              <span
-                className="text-xs text-white/40 flex items-center gap-1.5"
-                style={{ fontFamily: "var(--font-body)" }}
-              >
-                <Clock className="w-3 h-3" />
-                {event.date}
               </span>
             </div>
 
@@ -132,8 +125,19 @@ function EventCard({ event, index }: EventCardProps) {
             <div className="absolute top-0 left-0 w-4 h-4 border-l border-t border-white/10 z-10" />
             <div className="absolute bottom-0 right-0 w-4 h-4 border-r border-b border-white/10 z-10" />
             
-            {/* Event Image or Category Icon */}
-            {event.image ? (
+            {/* Website Preview, Event Image, or Category Icon */}
+            {event.previewUrl ? (
+              <>
+                <iframe
+                  src={event.previewUrl}
+                  title={`${event.title} preview`}
+                  className="absolute inset-0 w-full h-full pointer-events-none"
+                  loading="lazy"
+                  referrerPolicy="no-referrer"
+                />
+                <div className="absolute inset-0 bg-black/25" />
+              </>
+            ) : event.image ? (
               <>
                 <Image
                   src={event.image}

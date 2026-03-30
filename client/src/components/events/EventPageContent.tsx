@@ -20,7 +20,6 @@ import {
   Link2,
   Tag,
   FileText,
-  Calendar,
   Camera,
   X,
 } from "lucide-react";
@@ -36,6 +35,8 @@ export default function EventPageContent({ event }: EventPageContentProps) {
   const [showScrollTop, setShowScrollTop] = useState(false);
   const [lightboxImage, setLightboxImage] = useState<string | null>(null);
   const [activeSlide, setActiveSlide] = useState(0);
+
+  const hasPreview = Boolean(event.previewUrl);
 
   // Get slideshow images (all from gallery or just the main image)
   const slideshowImages = event.gallery || (event.image ? [event.image] : []);
@@ -143,7 +144,7 @@ export default function EventPageContent({ event }: EventPageContentProps) {
 
           {/* Content with Event Poster */}
           <div className="relative z-10 max-w-6xl mx-auto w-full">
-            {(event.image || slideshowImages.length > 0) ? (
+            {(hasPreview || event.image || slideshowImages.length > 0) ? (
               /* Two-column layout when image exists */
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 {/* Event Slideshow */}
@@ -154,9 +155,20 @@ export default function EventPageContent({ event }: EventPageContentProps) {
                   className="relative max-w-md mx-auto lg:mx-0 w-full"
                 >
                   <div className="flex gap-4">
-                    {/* Main Image */}
+                    {/* Main visual */}
                     <div className="relative flex-1 aspect-square rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
-                      {slideshowImages.length > 0 ? (
+                      {hasPreview ? (
+                        <>
+                          <iframe
+                            src={event.previewUrl}
+                            title={`${event.title} preview`}
+                            className="absolute inset-0 w-full h-full"
+                            loading="lazy"
+                            referrerPolicy="no-referrer"
+                          />
+                          <div className="absolute inset-0 bg-black/20" />
+                        </>
+                      ) : slideshowImages.length > 0 ? (
                         <>
                           {slideshowImages.map((img, idx) => (
                             <motion.div
@@ -189,7 +201,7 @@ export default function EventPageContent({ event }: EventPageContentProps) {
                     </div>
 
                     {/* Numbered Thumbnails */}
-                    {slideshowImages.length > 1 && (
+                    {!hasPreview && slideshowImages.length > 1 && (
                       <div className="flex flex-col gap-2 w-16 max-h-[450px] overflow-y-auto no-scrollbar">
                         {slideshowImages.map((img, idx) => (
                           <motion.button
@@ -229,7 +241,7 @@ export default function EventPageContent({ event }: EventPageContentProps) {
 
                 {/* Event Info */}
                 <div className="text-center lg:text-left">
-                  {/* Category & Date */}
+                  {/* Category */}
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -246,13 +258,6 @@ export default function EventPageContent({ event }: EventPageContentProps) {
                     >
                       <Zap className="w-3.5 h-3.5" />
                       {event.category}
-                    </span>
-                    <span
-                      className="text-sm text-white/40 flex items-center gap-1.5"
-                      style={{ fontFamily: "var(--font-body)" }}
-                    >
-                      <Calendar className="w-3.5 h-3.5" />
-                      {event.date}
                     </span>
                     {event.isUpcoming && (
                       <span className="inline-flex items-center gap-2 px-3 py-1 bg-green-500/20 border border-green-500/30 rounded-full">
@@ -350,7 +355,7 @@ export default function EventPageContent({ event }: EventPageContentProps) {
             ) : (
               /* Original centered layout when no image */
               <div className="text-center">
-                {/* Category & Date */}
+                {/* Category */}
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -367,13 +372,6 @@ export default function EventPageContent({ event }: EventPageContentProps) {
                   >
                     <Zap className="w-3.5 h-3.5" />
                     {event.category}
-                  </span>
-                  <span
-                    className="text-sm text-white/40 flex items-center gap-1.5"
-                    style={{ fontFamily: "var(--font-body)" }}
-                  >
-                    <Calendar className="w-3.5 h-3.5" />
-                    {event.date}
                   </span>
                   {event.isUpcoming && (
                     <span className="inline-flex items-center gap-2 px-3 py-1 bg-green-500/20 border border-green-500/30 rounded-full">

@@ -2,7 +2,7 @@
 
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { ArrowUpRight, Calendar, Clock } from "lucide-react";
+import { ArrowUpRight, Clock } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { TextReveal } from "../TextReveal";
@@ -12,8 +12,9 @@ interface UpcomingEvent {
   title: string;
   description: string;
   tags: string[];
-  dateRange: string;
   registrationLink: string;
+  websiteLink?: string;
+  previewUrl?: string;
   image?: string;
   slug?: string;
   stats: { label: string; value: string }[];
@@ -22,17 +23,17 @@ interface UpcomingEvent {
 // Upcoming Events
 const upcomingEvents: UpcomingEvent[] = [
   {
-    title: "75 DAYS DSA CHALLENGE",
-    description: "Daily problems, weekly contests, mentor-led discussions, and leaderboards to build consistency and prepare for FAANG interviews.",
+    title: "25 DAYS DSA CHALLENGE",
+    description: "A focused 25-day DSA sprint is coming soon.",
     tags: ["Challenge", "Algorithms", "Competitive Programming"],
-    dateRange: "Jan 1 → Mar 15, 2026",
     registrationLink: "#",
-    image: "/events/75-days.webp",
+    websiteLink: "https://squid-game-cyan.vercel.app/",
+    previewUrl: "https://squid-game-cyan.vercel.app/",
     slug: "75-days-dsa-challenge",
     stats: [
-      { label: "Days", value: "75" },
-      { label: "Problems", value: "150+" },
-      { label: "Contests", value: "10" },
+      { label: "Days", value: "25" },
+      { label: "Problems", value: "50+" },
+      { label: "Contests", value: "4" },
       { label: "Mentors", value: "5" }
     ]
   }
@@ -59,9 +60,20 @@ function UpcomingEventCard({ event }: { event: UpcomingEvent }) {
       className="relative overflow-hidden rounded-2xl border border-white/10 bg-linear-to-br from-[var(--surface)] to-[#050505]"
     >
       <div className="grid grid-cols-1 lg:grid-cols-2">
-        {/* Left: Event Poster Image */}
+        {/* Left: Event Preview */}
         <div className="relative aspect-square lg:aspect-auto lg:min-h-[500px] bg-linear-to-br from-[#0d1117] to-[#080808] overflow-hidden">
-          {event.image ? (
+          {event.previewUrl ? (
+            <>
+              <iframe
+                src={event.previewUrl}
+                title={`${event.title} preview`}
+                className="absolute inset-0 w-full h-full"
+                loading="lazy"
+                referrerPolicy="no-referrer"
+              />
+              <div className="absolute inset-0 bg-black/20" />
+            </>
+          ) : event.image ? (
             <>
               <Image
                 src={event.image}
@@ -77,7 +89,7 @@ function UpcomingEventCard({ event }: { event: UpcomingEvent }) {
               {/* Fallback: Large Number */}
               <div className="absolute inset-0 flex items-center justify-center">
                 <span className="text-[140px] md:text-[200px] font-black text-white/5 select-none" style={{ fontFamily: "var(--font-heading)" }}>
-                  75
+                  25
                 </span>
                 <p className="absolute bottom-1/3 text-white/40 text-sm tracking-[0.3em] uppercase" style={{ fontFamily: "var(--font-body)" }}>
                   Days of Code
@@ -99,14 +111,6 @@ function UpcomingEventCard({ event }: { event: UpcomingEvent }) {
         
         {/* Right: Content */}
         <div className="p-8 md:p-12 lg:p-16 flex flex-col justify-center">
-          {/* Date */}
-          <div className="flex items-center gap-3 mb-4">
-            <Calendar className="w-4 h-4 text-acm-blue" />
-            <span className="text-acm-blue font-medium tracking-normal" style={{ fontFamily: "var(--font-body)" }}>
-              {event.dateRange}
-            </span>
-          </div>
-          
           {/* Tags */}
           <div className="flex flex-wrap gap-2 mb-6">
             {event.tags.map((tag) => (
@@ -171,6 +175,18 @@ function UpcomingEventCard({ event }: { event: UpcomingEvent }) {
                 <Clock className="w-4 h-4" />
                 <span>Coming Soon</span>
               </div>
+              {event.websiteLink && (
+                <a
+                  href={event.websiteLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-3 px-8 py-4 border border-acm-blue/40 text-acm-blue font-semibold text-sm uppercase tracking-wider transition-all duration-300 hover:border-acm-blue hover:bg-acm-blue/10"
+                  style={{ fontFamily: "var(--font-body)" }}
+                >
+                  <span>Visit Website</span>
+                  <ArrowUpRight className="w-4 h-4" />
+                </a>
+              )}
               {event.slug && (
                 <Link
                   href={`/events/${event.slug}`}
@@ -233,14 +249,10 @@ function EventCard({ event, index }: { event: EventData; index: number }) {
         
         {/* Content */}
         <div className="p-6">
-          {/* Date */}
+          {/* Event number */}
           <div className="flex items-center gap-3 mb-4">
             <span className="text-acm-blue text-xs font-medium tracking-wider" style={{ fontFamily: "var(--font-body)" }}>
               {String(index + 1).padStart(2, '0')}
-            </span>
-            <div className="w-6 h-px bg-white/20" />
-            <span className="text-xs text-white/40" style={{ fontFamily: "var(--font-body)" }}>
-              {event.date}
             </span>
           </div>
           
