@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import TesseractClientWrapper from "./TesseractClientWrapper";
+import { notFound } from "next/navigation";
 
 export const metadata: Metadata = {
   title: "TESSERACT — Flagship Hackathon",
@@ -25,9 +25,5 @@ export const metadata: Metadata = {
 };
 
 export default function TesseractRoute() {
-  return (
-    <main className="relative min-h-screen bg-black selection:bg-[#0085ca]/30 overflow-x-hidden">
-      <TesseractClientWrapper />
-    </main>
-  );
+  notFound();
 }

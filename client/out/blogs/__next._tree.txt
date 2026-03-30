@@ -1,4 +1,4 @@
-:HL["/_next/static/chunks/92eff57362b66427.css","style"]
+:HL["/_next/static/chunks/e6099563cd7cd964.css","style"]
 :HL["/fonts/bebas-neue/BebasNeue-Regular.woff2","font",{"crossOrigin":"anonymous","type":"font/woff2"}]
 :HL["/fonts/montserrat/Montserrat-Variable.woff2","font",{"crossOrigin":"anonymous","type":"font/woff2"}]
-0:{"buildId":"z8is0pW3x9aBUf7663xW-","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"blogs","paramType":null,"paramKey":"blogs","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
+0:{"buildId":"jBiJRRLsbB8FCGeREjyCG","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"blogs","paramType":null,"paramKey":"blogs","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true},"staleTime":300}

@@ -10,7 +10,13 @@ const NAV_ITEMS = [
   { label: "Team", number: "3.0", href: "/teams" },
   { label: "Projects", number: "4.0", href: "/projects" },
   { label: "Blogs", number: "5.0", href: "/blogs" },
-  { label: "Tesseract", number: "6.0", href: "/tesseract", special: true },
+  {
+    label: "DSA",
+    number: "6.0",
+    href: "https://squid-game-cyan.vercel.app/",
+    special: true,
+    external: true,
+  },
 ];
 
 // Mobile nav includes Home
@@ -63,20 +69,37 @@ export default function Navbar() {
           <ul className="flex flex-1 items-stretch text-xs uppercase tracking-[0.3em]">
             {NAV_ITEMS.map((item) => (
               <li key={item.label} className="flex flex-1 min-w-[140px]">
-                <Link
-                  href={item.href}
-                  className={`flex flex-1 items-center justify-center gap-2 border-r border-white/5 px-3 py-3 transition ${isActive(item.href)
-                      ? (item.special ? "bg-[#0085ca]/35 text-white" : "bg-acm-blue/35 text-white")
-                      : (item.special ? "text-[#0085ca] hover:bg-[#0085ca]/10 hover:text-[#0085ca]" : "text-white/60 hover:bg-white/5 hover:text-white")
-                    }`}
-                >
-                  <span className="font-mono text-[11px] tracking-[0.2em]">
-                    {item.number}
-                  </span>
-                  <span className="font-semibold tracking-[0.15em]">
-                    {item.label}
-                  </span>
-                </Link>
+                {item.external ? (
+                  <a
+                    href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`flex flex-1 items-center justify-center gap-2 border-r border-white/5 px-3 py-3 transition ${item.special ? "text-[#0085ca] hover:bg-[#0085ca]/10 hover:text-[#0085ca]" : "text-white/60 hover:bg-white/5 hover:text-white"
+                      }`}
+                  >
+                    <span className="font-mono text-[11px] tracking-[0.2em]">
+                      {item.number}
+                    </span>
+                    <span className="font-semibold tracking-[0.15em]">
+                      {item.label}
+                    </span>
+                  </a>
+                ) : (
+                  <Link
+                    href={item.href}
+                    className={`flex flex-1 items-center justify-center gap-2 border-r border-white/5 px-3 py-3 transition ${isActive(item.href)
+                        ? (item.special ? "bg-[#0085ca]/35 text-white" : "bg-acm-blue/35 text-white")
+                        : (item.special ? "text-[#0085ca] hover:bg-[#0085ca]/10 hover:text-[#0085ca]" : "text-white/60 hover:bg-white/5 hover:text-white")
+                      }`}
+                  >
+                    <span className="font-mono text-[11px] tracking-[0.2em]">
+                      {item.number}
+                    </span>
+                    <span className="font-semibold tracking-[0.15em]">
+                      {item.label}
+                    </span>
+                  </Link>
+                )}
               </li>
             ))}
           </ul>
@@ -110,17 +133,31 @@ export default function Navbar() {
               <ul className="space-y-4 text-sm uppercase tracking-[0.25em]">
                 {MOBILE_NAV_ITEMS.map((item) => (
                   <li key={item.label}>
-                    <Link
-                      href={item.href}
-                      onClick={() => setMobileOpen(false)}
-                      className={`flex items-center justify-between transition-colors ${isActive(item.href)
-                          ? (item.special ? "text-[#0085ca]" : "text-white")
-                          : (item.special ? "text-[#0085ca]/80 hover:text-[#0085ca]" : "text-white/70 hover:text-white")
-                        }`}
-                    >
-                      <span className="font-mono text-[11px]">{item.number}</span>
-                      <span className="font-semibold">{item.label}</span>
-                    </Link>
+                    {item.external ? (
+                      <a
+                        href={item.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={() => setMobileOpen(false)}
+                        className={`flex items-center justify-between transition-colors ${item.special ? "text-[#0085ca]/80 hover:text-[#0085ca]" : "text-white/70 hover:text-white"
+                          }`}
+                      >
+                        <span className="font-mono text-[11px]">{item.number}</span>
+                        <span className="font-semibold">{item.label}</span>
+                      </a>
+                    ) : (
+                      <Link
+                        href={item.href}
+                        onClick={() => setMobileOpen(false)}
+                        className={`flex items-center justify-between transition-colors ${isActive(item.href)
+                            ? (item.special ? "text-[#0085ca]" : "text-white")
+                            : (item.special ? "text-[#0085ca]/80 hover:text-[#0085ca]" : "text-white/70 hover:text-white")
+                          }`}
+                      >
+                        <span className="font-mono text-[11px]">{item.number}</span>
+                        <span className="font-semibold">{item.label}</span>
+                      </Link>
+                    )}
                   </li>
                 ))}
               </ul>

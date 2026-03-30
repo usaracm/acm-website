@@ -37,6 +37,7 @@ export interface EventData {
     role: string;
     company?: string;
   }[];
+  previewUrl?: string;
   isUpcoming?: boolean;
   isFeatured?: boolean;
   registrationUrl?: string;
@@ -49,7 +50,7 @@ export const eventsData: EventData[] = [
   {
     id: "1",
     slug: "75-days-dsa-challenge",
-    title: "75 Days DSA Challenge",
+    title: "25 Days DSA Challenge",
     subtitle: "Level Up Your DSA Skills",
     emoji: "🔥",
     date: "January 1, 2026",
@@ -57,27 +58,31 @@ export const eventsData: EventData[] = [
     year: "2026",
     category: "Challenge",
     categoryColor: "#FF6B6B",
-    description: "Start 2026 with consistency, logic, and problem-solving power.",
-    fullDescription: "The 75 Days DSA Challenge by GGSIPU EDC ACM Student Chapter is a structured coding initiative designed to help students strengthen their Data Structures and Algorithms (DSA) skills through daily problem-solving. Whether you're a beginner or looking to sharpen your skills for placements and competitive programming, this challenge is for you.\n\nThis isn't just about solving problems—it's about building discipline, creating a habit, and becoming part of a community that pushes each other to be better every single day. With curated problem sets, weekly reviews, and a supportive Discord community, you'll never feel alone in this journey.",
-    venue: "Online (ACM Portal + LeetCode)",
+    description: "A focused 25-day DSA sprint is coming soon.",
+    fullDescription: "The 25 Days DSA Challenge by GGSIPU EDC ACM Student Chapter is a focused coding initiative designed to help students strengthen their Data Structures and Algorithms (DSA) skills through consistent daily problem-solving. Whether you're a beginner or looking to sharpen your skills for placements and competitive programming, this challenge is for you.\n\nThis isn't just about solving problems - it's about building discipline, creating a habit, and becoming part of a community that pushes each other to improve every single day. With curated problem sets, weekly reviews, and a supportive Discord community, you'll never feel alone in this journey. The next edition is coming soon.",
+    venue: "Online (ACM Portal + HackerRank)",
     participants: "Expected 300+",
     organizers: ["Arsh Singh", "Sheelendra Kumar", "DSA Team"],
+    previewUrl: "https://squid-game-cyan.vercel.app/",
     image: "/events/75-days.webp",
     highlights: [
       "✦ Master fundamental and advanced DSA concepts",
       "✦ Daily tracking and live leaderboard",
       "✦ Peer learning through ACM Discord",
       "✦ Weekly review meetups for doubt resolution",
-      "✦ Completion certificate for full 75-day streak",
+      "✦ Completion certificate for full 25-day streak",
       "✦ Special badges for top performers",
     ],
     prizes: [
-      { position: "1st Place", prize: "Premium LeetCode Subscription + Swag Kit", emoji: "🥇" },
-      { position: "2nd Place", prize: "6-Month LeetCode Premium", emoji: "🥈" },
-      { position: "3rd Place", prize: "3-Month LeetCode Premium", emoji: "🥉" },
+      { position: "1st Place", prize: "Premium HackerRank Subscription + Swag Kit", emoji: "🥇" },
+      { position: "2nd Place", prize: "6-Month HackerRank Premium", emoji: "🥈" },
+      { position: "3rd Place", prize: "3-Month HackerRank Premium", emoji: "🥉" },
       { position: "Consistency Award", prize: "ACM Exclusive Merchandise", emoji: "⭐" },
     ],
     tags: ["DSA", "Competitive Programming", "Algorithms", "Data Structures"],
+    links: [
+      { label: "Official Website", url: "https://squid-game-cyan.vercel.app/" },
+    ],
 
     schedule: [
       { time: "Daily", activity: "Solve 1-2 DSA problems from curated list" },
@@ -90,7 +95,55 @@ export const eventsData: EventData[] = [
     registrationUrl: "#",
     registrationDeadline: "December 25, 2025",
   },
-  // 2. Hour of AI (Most Recent Past)
+  // 2. GWY Conf 2026 (Most Recent Past)
+  {
+    id: "12",
+    slug: "gwy-conf-2026",
+    title: "GWY Conf 2026",
+    subtitle: "Insights Across Technology, Startups, and Internet Culture",
+    emoji: "🌟",
+    date: "March 28, 2026",
+    year: "2026",
+    category: "Conference",
+    categoryColor: "#FF8A3D",
+    description: "A curated in-person conference connecting students with leaders across tech, startups, and internet culture.",
+    fullDescription: "As part of its commitment to innovation and practical learning, the GGSIPU EDC ACM Student Chapter, in collaboration with the GGSIPU USS ACM Student Chapter and GWY Conf, organized \"GWY Conf 2026.\" This curated conference introduced students to insights across technology, startups, and internet culture through speaker sessions, panel discussions, and networking. A controlled participation model ensured high-quality engagement, providing attendees with valuable exposure and meaningful connections within the innovation ecosystem.",
+    venue: "GGSIPU EDC Campus",
+    participants: "Curated Participation",
+    organizers: [
+      "GGSIPU EDC ACM Student Chapter",
+      "GGSIPU USS ACM Student Chapter",
+      "GWY Conf",
+    ],
+    highlights: [
+      "✦ Curated in-person conference format",
+      "✦ Speaker sessions and panel discussions",
+      "✦ Networking with builders and founders",
+      "✦ Focus on technology, startups, and internet culture",
+      "✦ Controlled participation for high-quality engagement",
+    ],
+    speakers: [
+      { name: "Nishita", role: "Speaker" },
+      { name: "Tanvi Gupta", role: "Speaker" },
+      { name: "Kamna Bhardwaj", role: "Speaker" },
+      { name: "Aaira Kaurrr", role: "Speaker" },
+      { name: "Tanishi Mookerjee", role: "Speaker" },
+      { name: "Bhawna Chauhan", role: "Speaker" },
+    ],
+    tags: ["Conference", "Startups", "Networking", "Community", "Women in Tech"],
+    image: "/events/11 GWY CONF/11.webp",
+    gallery: [
+      "/events/11 GWY CONF/11.webp",
+      "/events/11 GWY CONF/IMG-20260328-WA0176.webp",
+      "/events/11 GWY CONF/IMG-20260329-WA0292.webp",
+      "/events/11 GWY CONF/IMG20260328140510.webp",
+      "/events/11 GWY CONF/IMG20260328145843.webp",
+      "/events/11 GWY CONF/IMG20260328152011.webp",
+      "/events/11 GWY CONF/IMG20260328161729.webp",
+    ],
+    isFeatured: true,
+  },
+  // 3. Hour of AI
   {
     id: "8",
     slug: "hour-of-ai-ai-sparks",
@@ -128,7 +181,7 @@ export const eventsData: EventData[] = [
       "/events/10 HOUR OF AI/Screenshot 2025-12-08 at 11.27.26 PM.webp",
     ],
   },
-  // 3. FAANG Ep 3
+  // 4. FAANG Ep 3
   {
     id: "2",
     slug: "faang-weekend-nvidia",
@@ -168,7 +221,7 @@ export const eventsData: EventData[] = [
     ],
     isFeatured: true,
   },
-  // 4. Code Catalyst
+  // 5. Code Catalyst
   {
     id: "3",
     slug: "codecatalyst-0x6",
@@ -210,7 +263,7 @@ export const eventsData: EventData[] = [
     ],
     isFeatured: true,
   },
-  // 5. Silicon Quest
+  // 6. Silicon Quest
   {
     id: "4",
     slug: "silicon-quest-animeverse",
@@ -252,7 +305,7 @@ export const eventsData: EventData[] = [
       "/events/7 SILICON QUEST ANIMEVERSE/IMG_20251015_131352.webp",
     ],
   },
-  // 6. HeLa Crossroads
+  // 7. HeLa Crossroads
   {
     id: "5",
     slug: "hela-crossroads",
@@ -291,7 +344,7 @@ export const eventsData: EventData[] = [
       "/events/6 HELA CROSSROADS/Screenshot 2025-12-11 at 01-19-16 Instagram.webp",
     ],
   },
-  // 7. FAANG Ep 2
+  // 8. FAANG Ep 2
   {
     id: "6",
     slug: "faang-weekend-meta",
@@ -329,7 +382,7 @@ export const eventsData: EventData[] = [
       "/events/5 FAANGWEEKEND EP 2/Screenshot 2025-09-21 at 8.12.24 PM.webp",
     ],
   },
-  // 8. FAANG Ep 1
+  // 9. FAANG Ep 1
   {
     id: "7",
     slug: "faang-weekend-microsoft",
@@ -367,7 +420,7 @@ export const eventsData: EventData[] = [
       "/events/4 FAANGWEEKEND EP 1/Screenshot 2025-08-30 203255.webp",
     ],
   },
-  // 9. Kickstart Outline (ACM Orientation)
+  // 10. Kickstart Outline (ACM Orientation)
   {
     id: "9",
     slug: "kickstart-with-acm",
@@ -402,7 +455,7 @@ export const eventsData: EventData[] = [
       "/events/3 ACM ORIENTATION & LLM WORKSHOP/Screenshot 2025-12-11 at 00-58-55 Instagram.webp",
     ],
   },
-  // 10. Indo-American Seminar
+  // 11. Indo-American Seminar
   {
     id: "10",
     slug: "indo-american-seminar",
@@ -441,7 +494,7 @@ export const eventsData: EventData[] = [
     ],
     isFeatured: true,
   },
-  // 11. Smart Delhi Ideathon
+  // 12. Smart Delhi Ideathon
   {
     id: "11",
     slug: "smart-delhi-ideathon",

@@ -3,6 +3,7 @@ import { Hero } from "@/components/home";
 
 // Dynamically load components below the fold
 const AboutSection = dynamic(() => import("@/components/home/AboutSection"), { ssr: true });
+const AwardSection = dynamic(() => import("@/components/home/AwardSection"), { ssr: true });
 const MarqueeSection = dynamic(() => import("@/components/home/MarqueeSection"), { ssr: true });
 const EventsSection = dynamic(() => import("@/components/home/EventsSection"), { ssr: true });
 const GallerySection = dynamic(() => import("@/components/home/GallerySection"), { ssr: true });
@@ -13,6 +14,7 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-[var(--background)]">
       <Hero />
+      <AwardSection />
       <AboutSection />
       <StoryTransition
         topLabel="Our Journey"
