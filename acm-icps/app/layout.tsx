@@ -11,8 +11,39 @@ const ibmPlexSans = IBM_Plex_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "IIC-AIR 2027",
-  description: "1st Indraprastha International Conference on Artificial Intelligence, IoT and Robotics (IIC-AIR) 2027.",
+  title: "IIC-AIR 2027 | Indraprastha International Conference on AI, IoT & Robotics",
+  description: "1st Indraprastha International Conference on Artificial Intelligence, IoT and Robotics (IIC-AIR) 2027. Organized by GGSIPU EDC ACM Student Chapter at USAR.",
+  keywords: [
+    "IIC-AIR 2027",
+    "International Conference",
+    "Artificial Intelligence Conference",
+    "Internet of Things",
+    "IoT",
+    "Robotics",
+    "GGSIPU",
+    "USAR",
+    "ACM Student Chapter",
+    "Research Papers",
+    "Delhi Conference"
+  ],
+  authors: [{ name: "GGSIPU EDC ACM Student Chapter" }],
+  openGraph: {
+    title: "IIC-AIR 2027 | Indraprastha International Conference on AI, IoT & Robotics",
+    description: "1st Indraprastha International Conference on Artificial Intelligence, IoT and Robotics (IIC-AIR) 2027. Submit your original research papers.",
+    url: "https://usar.acm.org/iicair/",
+    siteName: "IIC-AIR 2027",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "IIC-AIR 2027 | International Conference on AI, IoT & Robotics",
+    description: "Join us for IIC-AIR 2027. Organized by GGSIPU EDC ACM Student Chapter.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  }
 };
 
 export default function RootLayout({

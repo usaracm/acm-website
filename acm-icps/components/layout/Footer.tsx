@@ -91,6 +91,26 @@ export default function Footer() {
                 Submission Portal
               </a>
             </li>
+            <li>
+              <a
+                href="https://www.ipu.ac.in/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-white transition-colors font-[300]"
+              >
+                GGSIPU Website
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.acm.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-white transition-colors font-[300]"
+              >
+                ACM Website
+              </a>
+            </li>
           </ul>
         </div>
 
