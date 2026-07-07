@@ -10,6 +10,8 @@ jobs:
   build-and-deploy:
     name: Build & Deploy Static Export
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     env:
       FTP_SERVER: ${{ secrets.FTP_SERVER || secrets.CPANEL_SERVER || secrets.CPANEL_HOST }}
       FTP_USERNAME: ${{ secrets.FTP_USERNAME || secrets.CPANEL_USERNAME }}
