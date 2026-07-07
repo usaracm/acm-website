@@ -1,0 +1,47 @@
+name: Deploy to cPanel
+
+on:
+  push:
+    branches:
+      - super-website
+      - main
+
+jobs:
+  build-and-deploy:
+    name: Build & Deploy Static Export
+    runs-on: ubuntu-latest
+    env:
+      FTP_SERVER: ${{ secrets.FTP_SERVER || secrets.CPANEL_SERVER || secrets.CPANEL_HOST }}
+      FTP_USERNAME: ${{ secrets.FTP_USERNAME || secrets.CPANEL_USERNAME }}
+      FTP_PASSWORD: ${{ secrets.FTP_PASSWORD || secrets.CPANEL_PASSWORD }}
+      FTP_TARGET_DIR: ${{ secrets.FTP_TARGET_DIR || '/' }}
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+          cache-dependency-path: client/package-lock.json
+
+      - name: Install Dependencies
+        working-directory: client
+        run: npm ci
+
+      - name: Run Build (Static Export)
+        working-directory: client
+        run: npm run build
+
+      - name: Deploy to cPanel via FTP
+        if: ${{ env.FTP_SERVER != '' && env.FTP_USERNAME != '' && env.FTP_PASSWORD != '' }}
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ env.FTP_SERVER }}
+          username: ${{ env.FTP_USERNAME }}
+          password: ${{ env.FTP_PASSWORD }}
+          local-dir: ./client/out/
+          server-dir: ${{ env.FTP_TARGET_DIR }}
+          dangerous-clean-slate: false

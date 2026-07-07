@@ -44,7 +44,5 @@ next-env.d.ts
 # local env files
 .env.local
 .env.development.local
-/.github
-
 client/.next/
 client/node_modules/
