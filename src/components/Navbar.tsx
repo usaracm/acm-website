@@ -11,9 +11,9 @@ const NAV_ITEMS = [
   { label: "Projects", number: "4.0", href: "/projects" },
   { label: "Blogs", number: "5.0", href: "/blogs" },
   {
-    label: "DSA",
+    label: "IIC-AIR",
     number: "6.0",
-    href: "https://squid-game-cyan.vercel.app/",
+    href: "/iicair/",
     special: true,
     external: true,
   },
