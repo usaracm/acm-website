@@ -1,0 +1,72 @@
+name: Build and Deploy to cPanel
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy:
+    name: Build and Deploy
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: 'npm'
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Run Lint Checks
+        run: npm run lint
+
+      - name: Build & Export Static Site
+        run: npm run build
+
+      - name: Format Server Directory
+        id: format-dir
+        run: |
+          DIR="${{ secrets.FTP_TARGET_DIR }}"
+          # Default to public_html/ if empty
+          if [ -z "$DIR" ]; then
+            DIR="public_html/"
+          fi
+
+          echo "Original input: $DIR"
+
+          # Strip full absolute cPanel path including public_html/conference
+          DIR=$(echo "$DIR" | sed -E 's|^(/?home/[^/]+/public_html/conference/?)?||')
+
+          # Strip /home/username/ or home/username/ from the start
+          DIR=$(echo "$DIR" | sed -E 's|^(/?home/[^/]+/)||')
+
+          # Strip any leading slashes to make it relative to the FTP root
+          DIR=$(echo "$DIR" | sed -E 's|^/+||')
+
+          # Ensure it ends with a trailing slash
+          if [[ ! "$DIR" =~ /$ ]]; then
+            DIR="$DIR/"
+          fi
+
+          # Fallback to root (./) if empty
+          if [ -z "$DIR" ] || [ "$DIR" = "/" ] || [ "$DIR" = "./" ]; then
+            DIR="./"
+          fi
+
+          echo "Formatted directory: $DIR"
+          echo "server_dir=$DIR" >> $GITHUB_OUTPUT
+
+      - name: Deploy to cPanel via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./out/
+          server-dir: ${{ steps.format-dir.outputs.server_dir }}
+          dangerous-clean-slate: false

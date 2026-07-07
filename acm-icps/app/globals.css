@@ -1,0 +1,114 @@
+@import "tailwindcss";
+
+:root {
+  --primary: #0085CA;
+  --primary-deep: #0073b0;
+  --primary-press: #006296;
+  --primary-soft: #2ea3e3;
+  --primary-bg-subdued-hover: #d9f2ff;
+  --brand-dark-900: #161616;
+  --ink: #161616;
+  --ink-secondary: #525252;
+  --ink-mute: #8c8c8c;
+  --ink-mute-2: #a4a4a4;
+  --on-primary: #ffffff;
+  --canvas: #ffffff;
+  --canvas-soft: #edf2f7;
+  --canvas-cream: #dde5ee;
+  --section-tint: #f5f9ff;
+  --section-tint-strong: #ebf3ff;
+  --hairline: #d5dee8;
+  --hairline-input: #161616;
+  --ruby: #da1e28;
+  --magenta: #f96bee;
+  --lemon: #f1c21b;
+  --shadow-blue: #0043ce;
+
+  /* Custom easing curves from IBM Carbon standards */
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+@theme {
+  --color-primary: var(--primary);
+  --color-primary-deep: var(--primary-deep);
+  --color-primary-press: var(--primary-press);
+  --color-primary-soft: var(--primary-soft);
+  --color-primary-bg-subdued-hover: var(--primary-bg-subdued-hover);
+  --color-brand-dark-900: var(--brand-dark-900);
+  --color-ink: var(--ink);
+  --color-ink-secondary: var(--ink-secondary);
+  --color-ink-mute: var(--ink-mute);
+  --color-ink-mute-2: var(--ink-mute-2);
+  --color-on-primary: var(--on-primary);
+  --color-canvas: var(--canvas);
+  --color-canvas-soft: var(--canvas-soft);
+  --color-canvas-cream: var(--canvas-cream);
+  --color-hairline: var(--hairline);
+  --color-hairline-input: var(--hairline-input);
+  --color-ruby: var(--ruby);
+  --color-magenta: var(--magenta);
+  --color-lemon: var(--lemon);
+
+  --font-sans: var(--font-sans), "Helvetica Neue", Arial, sans-serif;
+}
+
+body {
+  background-color: var(--canvas);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  letter-spacing: 0.16px; /* Carbon precision body tracking */
+}
+
+/* Custom class for tabular numerals */
+.tnum {
+  font-feature-settings: "tnum" on;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Custom fade in utility */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 200ms var(--ease-out) forwards;
+}
+
+.surface-page {
+  background: linear-gradient(180deg, var(--section-tint) 0, var(--canvas) 280px);
+}
+
+.surface-band {
+  background: linear-gradient(180deg, var(--section-tint) 0%, var(--canvas-soft) 100%);
+}
+
+.surface-band-strong {
+  background: linear-gradient(180deg, var(--section-tint-strong) 0%, var(--canvas-soft) 100%);
+}
+
+.hero-seamless-blend {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(245, 249, 255, 0.6) 55%,
+    var(--section-tint) 100%
+  );
+}
+
+/* IBM Carbon Flat Square hover action */
+@media (hover: hover) and (pointer: fine) {
+  .hover-lift {
+    transition: transform 200ms var(--ease-out), border-color 200ms var(--ease-out);
+  }
+  .hover-lift:hover {
+    transform: translateY(-2px);
+    border-color: var(--primary) !important;
+  }
+}

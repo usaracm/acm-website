@@ -1,0 +1,347 @@
+[
+  {
+    "name": "Prof. (Dr.) Mahesh Verma",
+    "role": "Chief Patron",
+    "affiliation": "Hon’ble Vice Chancellor, GGSIPU",
+    "group": "patron",
+    "photo": "/faculty/mahesh-verma.png"
+  },
+  {
+    "name": "Prof. Arvinder Kaur",
+    "role": "Patron",
+    "affiliation": "Director (Academics) [EDC] & Dean, USAR",
+    "group": "patron",
+    "photo": "/faculty/arvinder-kaur-v2.png"
+  },
+  {
+    "name": "Dr. Kamal Pathak",
+    "role": "Patron",
+    "affiliation": "Registrar, GGSIPU",
+    "group": "patron",
+    "photo": "/faculty/kamal-pathak-v2.png"
+  },
+  {
+    "name": "Prof. Rahul Johari",
+    "role": "General Chair",
+    "affiliation": "USAR, GGSIPU",
+    "group": "chair",
+    "email": "rahul@ipu.ac.in",
+    "photo": "/faculty/rahul-johari.jpg"
+  },
+  {
+    "name": "Prof. Kriti Batra",
+    "role": "General Chair",
+    "affiliation": "USAR, GGSIPU",
+    "group": "chair",
+    "email": "kbatra@ipu.ac.in",
+    "photo": "/faculty/kriti-batra.jpg"
+  },
+  {
+    "name": "Prof. Abha Agarwal",
+    "role": "General Chair",
+    "affiliation": "USAR, GGSIPU",
+    "group": "chair",
+    "email": "abha@ipu.ac.in",
+    "photo": "/faculty/abha-agarwal.jpg"
+  },
+  {
+    "name": "Prof. Nanhay Singh",
+    "role": "Advisory Board Member",
+    "affiliation": "Netaji Subhash University of Technology East Campus, Delhi",
+    "group": "advisory",
+    "email": "nanhay.singh@nsut.ac.in"
+  },
+  {
+    "name": "Prof. Shailender Kumar",
+    "role": "Advisory Board Member",
+    "affiliation": "Delhi Technological University",
+    "group": "advisory",
+    "email": "shailenderkumar@dce.ac.in"
+  },
+  {
+    "name": "Prof. A K Mohapatra",
+    "role": "Advisory Board Member",
+    "affiliation": "IGDTUW, Delhi",
+    "group": "advisory",
+    "email": "akmohapatra@igdtuw.ac.in"
+  },
+  {
+    "name": "Prof. M P Mishra",
+    "role": "Advisory Board Member",
+    "affiliation": "IGNOU, New Delhi",
+    "group": "advisory",
+    "email": "mpmishra@ignou.ac.in"
+  },
+  {
+    "name": "Dr. Karan Singh",
+    "role": "Advisory Board Member",
+    "affiliation": "Jawaharlal Nehru University, New Delhi",
+    "group": "advisory",
+    "email": "Karan@mail.jnu.ac.in"
+  },
+  {
+    "name": "Prof. Manju Khari",
+    "role": "Advisory Board Member",
+    "affiliation": "Jawaharlal Nehru University, New Delhi",
+    "group": "advisory",
+    "email": "manjukhari@jnu.ac.in"
+  },
+  {
+    "name": "Prof. Deo Prakash Vidyarthi",
+    "role": "Advisory Board Member",
+    "affiliation": "Jawaharlal Nehru University, New Delhi",
+    "group": "advisory",
+    "email": "dpv@mail.jnu.ac.in"
+  },
+  {
+    "name": "Prof. Rakesh Kumar Singh",
+    "role": "Advisory Board Member",
+    "affiliation": "IGDTUW, Delhi",
+    "group": "advisory",
+    "email": "rksingh@igdtuw.ac.in"
+  },
+  {
+    "name": "Dr. Ashish Joshi",
+    "role": "Local Organizing Incharge",
+    "affiliation": "Assistant Professor, USAR",
+    "group": "local",
+    "email": "ashish.j@ipu.ac.in"
+  },
+  {
+    "name": "Ms. Geeta Mahajan",
+    "role": "Local Organizing Committee",
+    "affiliation": "DR (GA), GGSIPU",
+    "group": "local"
+  },
+  {
+    "name": "Mr. Ramesh Kumar",
+    "role": "Local Organizing Committee",
+    "affiliation": "AR (GA), GGSIPU",
+    "group": "local"
+  },
+  {
+    "name": "Dr. Madhu Gupta",
+    "role": "Local Organizing Committee",
+    "affiliation": "AR (GA), GGSIPU",
+    "group": "local"
+  },
+  {
+    "name": "Dr. Ravi Butola",
+    "role": "Local Organizing Committee",
+    "affiliation": "Assistant Professor, USAR",
+    "group": "local",
+    "email": "ravi.usar@ipu.ac.in"
+  },
+  {
+    "name": "Dr. Ghanendra Kumar",
+    "role": "Local Organizing Committee",
+    "affiliation": "Assistant Professor, USAR",
+    "group": "local",
+    "email": "ghanendra.usar@ipu.ac.in"
+  },
+  {
+    "name": "Dr. Anirban Dandapat",
+    "role": "Local Organizing Committee",
+    "affiliation": "Assistant Professor, USAR",
+    "group": "local",
+    "email": "anirban.usar@ipu.ac.in"
+  },
+  {
+    "name": "Dr. Khyati Chopra",
+    "role": "Local Organizing Committee",
+    "affiliation": "Assistant Professor, USAR",
+    "group": "local",
+    "email": "khyati.usar@ipu.ac.in"
+  },
+  {
+    "name": "Dr. Ritu Aggarwal",
+    "role": "Local Organizing Committee",
+    "affiliation": "Assistant Professor, USAR",
+    "group": "local",
+    "email": "ritu.usar@ipu.ac.in"
+  },
+  {
+    "name": "Dr. Atul Tripathi",
+    "role": "Finance Incharge",
+    "affiliation": "Assistant Professor, USAR",
+    "group": "finance",
+    "email": "dr.atultripathi22@gmail.com"
+  },
+  {
+    "name": "Dr. Manoj Kumar",
+    "role": "Finance Committee",
+    "affiliation": "Assistant Professor, USAR",
+    "group": "finance",
+    "email": "manoj.usar@ipu.ac.in"
+  },
+  {
+    "name": "Mr. Vijendra Singh",
+    "role": "Finance Committee",
+    "affiliation": "Assistant Registrar, USAR",
+    "group": "finance"
+  },
+  {
+    "name": "Dr. Amar Arora",
+    "role": "Web & Publicity Incharge",
+    "affiliation": "Assistant Professor, USAR",
+    "group": "web_publicity",
+    "email": "amar.usar@ipu.ac.in"
+  },
+  {
+    "name": "Dr. Amrit Pal Singh",
+    "role": "Web & Publicity Committee",
+    "affiliation": "Assistant Professor, USAR",
+    "group": "web_publicity",
+    "email": "amritpal@ipu.ac.in"
+  },
+  {
+    "name": "Dr. Rohit Singh",
+    "role": "Web & Publicity Committee",
+    "affiliation": "Assistant Professor, USAR",
+    "group": "web_publicity"
+  },
+  {
+    "name": "Dr. Anshul Bhatia",
+    "role": "Web & Publicity Committee",
+    "affiliation": "Assistant Professor, USAR",
+    "group": "web_publicity"
+  },
+  {
+    "name": "Dr. Himani Tyagi",
+    "role": "Web & Publicity Committee",
+    "affiliation": "Assistant Professor, USAR",
+    "group": "web_publicity"
+  },
+  {
+    "name": "Dr. Ruchika Lalit",
+    "role": "Web & Publicity Committee",
+    "affiliation": "Assistant Professor, USAR",
+    "group": "web_publicity"
+  },
+  {
+    "name": "Dr. Mahesh Chand",
+    "role": "Technical Program Committee",
+    "affiliation": "Assistant Professor, USAR",
+    "group": "tpc",
+    "email": "mahesh.usar@ipu.ac.in"
+  },
+  {
+    "name": "Dr. Deepak Tripathi",
+    "role": "Technical Program Committee",
+    "affiliation": "Assistant Professor, USAR",
+    "group": "tpc",
+    "email": "deepak.usar@ipu.ac.in"
+  },
+  {
+    "name": "Dr. Sanjay Kumar Singh",
+    "role": "Technical Program Committee",
+    "affiliation": "Assistant Professor, USAR",
+    "group": "tpc",
+    "email": "sanjay.usar@ipu.ac.in"
+  },
+  {
+    "name": "Dr. Neeta Singh",
+    "role": "Technical Program Committee",
+    "affiliation": "Assistant Professor, USAR",
+    "group": "tpc",
+    "email": "neeta.usar@ipu.ac.in"
+  },
+  {
+    "name": "Dr. Sumit Chaudhary",
+    "role": "Technical Program Committee",
+    "affiliation": "Assistant Professor, USAR",
+    "group": "tpc",
+    "email": "sumit.usar@ipu.ac.in"
+  },
+  {
+    "name": "Dr. Rajendra Kumar Arya",
+    "role": "Technical Program Committee",
+    "affiliation": "Assistant Professor, USAR",
+    "group": "tpc",
+    "email": "rajendra.usar@ipu.ac.in"
+  },
+  {
+    "name": "Dr. Bhanu Prakash Joshi",
+    "role": "Technical Program Committee",
+    "affiliation": "Assistant Professor, USAR",
+    "group": "tpc",
+    "email": "bhanu.usar@ipu.ac.in"
+  },
+  {
+    "name": "Dr. Sushobhan Chowdhury",
+    "role": "Technical Program Committee",
+    "affiliation": "Assistant Professor, USAR",
+    "group": "tpc",
+    "email": "sushobhan.usar@ipu.ac.in"
+  },
+  {
+    "name": "Dr. Subhash Nimanpure",
+    "role": "Technical Program Committee",
+    "affiliation": "Assistant Professor, USAR",
+    "group": "tpc",
+    "email": "subhash.usar@ipu.ac.in"
+  },
+  {
+    "name": "Dr. Amit Choudhary",
+    "role": "Technical Program Committee",
+    "affiliation": "Assistant Professor, USAR",
+    "group": "tpc",
+    "email": "amit.usar@ipu.ac.in"
+  },
+  {
+    "name": "Dr. Ruchika Sehgal",
+    "role": "Technical Program Committee",
+    "affiliation": "Assistant Professor, USAR",
+    "group": "tpc",
+    "email": "ruchika.usar@ipu.ac.in"
+  },
+  {
+    "name": "Dr. Arti Singh",
+    "role": "Technical Program Committee",
+    "affiliation": "Assistant Professor, USAR",
+    "group": "tpc",
+    "email": "arti.usar@ipu.ac.in"
+  },
+  {
+    "name": "Dr. Renu Dalal",
+    "role": "Technical Program Committee",
+    "affiliation": "Assistant Professor, USAR",
+    "group": "tpc",
+    "email": "renu.usar@ipu.ac.in"
+  },
+  {
+    "name": "Ms. Manisha Prafulla Parlewar",
+    "role": "Technical Program Committee",
+    "affiliation": "Assistant Professor, USAR",
+    "group": "tpc",
+    "email": "manisha.usar@ipu.ac.in"
+  },
+  {
+    "name": "Ms. Chetana Hooda",
+    "role": "Technical Program Committee",
+    "affiliation": "Assistant Professor, USAR",
+    "group": "tpc",
+    "email": "chetana.usar@ipu.ac.in"
+  },
+  {
+    "name": "Dr. Pooja Rana",
+    "role": "Technical Program Committee",
+    "affiliation": "Assistant Professor, USAR",
+    "group": "tpc",
+    "email": "pooja.usar@ipu.ac.in"
+  },
+  {
+    "name": "Dr. Jyoti",
+    "role": "Technical Program Committee",
+    "affiliation": "Assistant Professor, USAR",
+    "group": "tpc",
+    "email": "jyoti.usar@ipu.ac.in"
+  },
+  {
+    "name": "Sh. Pushp Kumar Baghel",
+    "role": "Technical Program Committee",
+    "affiliation": "Assistant Professor, USAR",
+    "group": "tpc",
+    "email": "pushp.usar@ipu.ac.in"
+  }
+]

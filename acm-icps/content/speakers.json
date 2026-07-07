@@ -1,0 +1,13 @@
+[
+  {
+    "name": "Prof. Deo Prakash Vidyarthi",
+    "title": "Professor",
+    "institution": "School of Computer and Systems Sciences, Jawaharlal Nehru University (JNU), New Delhi",
+    "photo": "/speakers/deo-prakash.png",
+    "researchArea": "Distributed Systems, Grid/Cloud Computing, Mobile Computing, Mobile Agent Security, Evolutionary Algorithms",
+    "bio": "Dr. Deo Prakash Vidyarthi is a Professor in the School of Computer and Systems Sciences at Jawaharlal Nehru University (JNU), New Delhi. He has over 25 years of research and teaching experience in the fields of distributed systems, evolutionary algorithms, and mobile computing. He has published numerous research papers in peer-reviewed journals and is a senior member of professional bodies.",
+    "links": {
+      "scholar": "https://scholar.google.com/citations?user=SlnFutoAAAAJ&hl=en"
+    }
+  }
+]

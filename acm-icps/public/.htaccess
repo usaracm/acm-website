@@ -1,0 +1,19 @@
+# Apache Configuration for Next.js Static Export (cPanel)
+RewriteEngine On
+
+# 1. Force HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# 2. Prevent directory redirects from appending trailing slashes
+# This prevents Apache from redirecting /venue to /venue/ before rewrite rules run
+DirectorySlash Off
+
+# 3. Support Clean URLs (without .html extension)
+# Rewrite /page or /page/ to /page.html if page.html exists at root
+RewriteCond %{DOCUMENT_ROOT}/$1.html -f
+RewriteRule ^(.*[^/])/?$ $1.html [L]
+
+# 4. Custom 404 Routing
+# fallback to 404.html if the requested path doesn't exist as a file or folder
+ErrorDocument 404 /404.html
