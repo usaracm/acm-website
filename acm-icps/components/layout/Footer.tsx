@@ -19,7 +19,7 @@ export default function Footer() {
               height={36}
               className="object-contain shrink-0"
             />
-             <span className="font-sans text-[13px] font-bold text-white">
+            <span className="font-sans text-[13px] font-bold text-white">
               IIC-AIR <span className="text-primary">2027</span>
             </span>
           </div>
@@ -93,7 +93,7 @@ export default function Footer() {
             </li>
             <li>
               <a
-                href="https://www.ipu.ac.in/"
+                href="https://www.ipu.ac.in/usar"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-white transition-colors font-[300]"
