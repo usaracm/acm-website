@@ -2,7 +2,7 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   output: "export",
-  basePath: "/iicair",
+  basePath: "/iic-air",
   trailingSlash: true,
   images: {
     unoptimized: true,

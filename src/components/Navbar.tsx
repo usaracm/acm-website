@@ -13,7 +13,7 @@ const NAV_ITEMS = [
   {
     label: "IIC-AIR",
     number: "6.0",
-    href: "/iicair/",
+    href: "/iic-air/",
     special: true,
     external: true,
   },

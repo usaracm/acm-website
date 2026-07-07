@@ -4,8 +4,8 @@ export function cn(...classes: (string | undefined | null | boolean)[]) {
 
 export function resolveAssetPath(path: string): string {
   if (!path) return "";
-  if (path.startsWith("/") && !path.startsWith("/iicair")) {
-    return `/iicair${path}`;
+  if (path.startsWith("/") && !path.startsWith("/iic-air")) {
+    return `/iic-air${path}`;
   }
   return path;
 }

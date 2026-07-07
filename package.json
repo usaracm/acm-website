@@ -5,7 +5,7 @@
   "homepage": "https://usar.acm.org",
   "scripts": {
     "dev": "next dev",
-    "build": "next build && npm run build --prefix acm-icps && rm -rf out/iicair && cp -r acm-icps/out out/iicair",
+    "build": "next build && npm run build --prefix acm-icps && rm -rf out/iic-air && cp -r acm-icps/out out/iic-air",
     "start": "next start",
     "lint": "eslint"
   },

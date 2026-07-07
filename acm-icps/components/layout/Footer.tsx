@@ -103,7 +103,7 @@ export default function Footer() {
             </li>
             <li>
               <a
-                href="https://www.acm.org/"
+                href="https://usar.acm.org/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-white transition-colors font-[300]"

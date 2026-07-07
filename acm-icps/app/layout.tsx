@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "IIC-AIR 2027 | Indraprastha International Conference on AI, IoT & Robotics",
     description: "1st Indraprastha International Conference on Artificial Intelligence, IoT and Robotics (IIC-AIR) 2027. Submit your original research papers.",
-    url: "https://usar.acm.org/iicair/",
+    url: "https://usar.acm.org/iic-air/",
     siteName: "IIC-AIR 2027",
     locale: "en_US",
     type: "website",
