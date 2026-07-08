@@ -184,6 +184,19 @@ export default function HomePage() {
                           </svg>
                         </a>
                       )}
+                      {!speaker.links?.scholar && speaker.links?.site && (
+                        <a
+                          href={speaker.links.site}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1 px-2 py-0.5 border border-primary/20 bg-primary/10 text-primary text-[9px] font-mono uppercase tracking-wider leading-none hover:bg-primary/20 transition-colors"
+                        >
+                          Profile
+                          <svg className="h-2.5 w-2.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                          </svg>
+                        </a>
+                      )}
                     </div>
                     <div className="flex flex-col gap-0.5">
                       <h4 className="text-[16px] font-semibold text-ink leading-tight">{speaker.name}</h4>
