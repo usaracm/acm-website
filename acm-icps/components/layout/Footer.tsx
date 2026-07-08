@@ -3,8 +3,6 @@ import Link from "next/link";
 import { resolveAssetPath } from "@/lib/utils";
 
 export default function Footer() {
-  const currentYear = new Date().getFullYear();
-
   return (
     <footer className="w-full border-t border-white/10 bg-[#161616] min-h-[320px] flex flex-col justify-between py-16 px-6 text-white/65">
       <div className="mx-auto w-full max-w-7xl grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -148,7 +146,7 @@ export default function Footer() {
       {/* Bottom bar */}
       <div className="mx-auto w-full max-w-7xl border-t border-white/10 mt-16 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
         <p className="text-[12px] font-[300] text-center sm:text-left">
-          &copy; {currentYear} IIC-AIR 2027. All rights reserved. Non-commercial academic event.
+          &copy; 2027 IIC-AIR. All rights reserved. Non-commercial academic event.
         </p>
         <p className="text-[12px] font-[300] text-center sm:text-right">
           Design guidelines enforced via ACM Chapter.
