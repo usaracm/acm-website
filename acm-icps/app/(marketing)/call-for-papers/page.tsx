@@ -155,7 +155,7 @@ export default function CallForPapersPage() {
           <p className="text-[12px] text-ink-mute font-sans">
             Submission queries may be directed to the Technical Program Chairs.
           </p>
-          {/* IEEE Sustainability badge */}
+          {/* ACM Sustainability badge */}
           <div className="flex items-center gap-2 shrink-0">
             <div className="h-5 w-5 rounded-none bg-[#24a148]/10 flex items-center justify-center">
               <svg className="h-3 w-3 text-[#24a148]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -164,7 +164,7 @@ export default function CallForPapersPage() {
               </svg>
             </div>
             <span className="text-[10px] font-sans uppercase tracking-wider text-[#24a148]">
-              IEEE Sustainability Initiative
+              ACM Sustainability Initiative
             </span>
           </div>
         </footer>

@@ -46,16 +46,16 @@ export default function Hero() {
         <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-white/90 via-[#f5f9ff]/85 to-transparent" />
       </div>
 
-      <div className="relative mx-auto w-full max-w-7xl px-6 pt-16 pb-24 md:pt-28 md:pb-40 flex flex-col items-center justify-center gap-10 sm:gap-12 z-10 text-center">
+      <div className="relative mx-auto w-full max-w-7xl px-6 pt-12 pb-16 md:pt-16 md:pb-20 flex flex-col items-center justify-center gap-8 sm:gap-10 z-10 text-center">
         {/* Main Box: Centered Messaging */}
-        <div className="w-full max-w-3xl flex flex-col items-center bg-white/82 border border-white/80 backdrop-blur-[3px] px-6 py-8 sm:px-10 sm:py-12">
+        <div className="w-full max-w-6xl flex flex-col items-center bg-white/85 border border-white/80 backdrop-blur-[4px] px-6 py-6 sm:px-10 sm:py-10">
           {/* Eyebrow with ACM logo mark */}
           <motion.div
             custom={0}
             variants={elementVariants}
             initial="hidden"
             animate="visible"
-            className="flex items-center justify-center gap-3 mb-5"
+            className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3 mb-4 text-center"
           >
             <Image
               src={resolveAssetPath("/BLUE WITH WHITE TEXT.png")}
@@ -64,18 +64,18 @@ export default function Hero() {
               height={32}
               className="opacity-90 object-contain"
             />
-            <span className="text-[13px] text-ink font-sans font-[400] tracking-wide">
-              GGSIPU EDC ACM Student Chapter · USAR
+            <span className="text-[13px] text-ink font-sans font-[400] tracking-wide text-center">
+              GGSIPU EDC ACM STUDENT CHAPTER · USAR
             </span>
           </motion.div>
 
-          {/* Headline — IBM display at weight 300 */}
+          {/* Headline — Balanced display typography */}
           <motion.h1
             custom={1}
             variants={elementVariants}
             initial="hidden"
             animate="visible"
-            className="text-[26px] sm:text-[46px] md:text-[56px] font-[300] tracking-[-1.5px] leading-[1.1] text-ink mb-5 font-sans"
+            className="text-[26px] sm:text-[44px] md:text-[52px] font-[500] tracking-tight leading-[1.2] text-ink mb-4 font-sans"
           >
             1ST INDRAPRASTHA INTERNATIONAL CONFERENCE ON{" "}
             <span className="text-primary block sm:inline">ARTIFICIAL INTELLIGENCE, IoT &amp; ROBOTICS</span> (IIC-AIR)
@@ -87,7 +87,7 @@ export default function Hero() {
             variants={elementVariants}
             initial="hidden"
             animate="visible"
-            className="flex flex-wrap items-center justify-center gap-4 mb-6 text-[14px]"
+            className="flex flex-wrap items-center justify-center gap-4 mb-5 text-[14px]"
           >
             <span className="inline-flex items-center gap-2 text-ink font-[400]">
               <svg className="h-4 w-4 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -105,53 +105,53 @@ export default function Hero() {
             </span>
           </motion.div>
 
-          {/* Subtext */}
-          <motion.p
+          {/* Countdown immediately visible */}
+          <motion.div
             custom={3}
             variants={elementVariants}
             initial="hidden"
             animate="visible"
-            className="text-[15px] sm:text-[17px] font-[400] leading-relaxed text-ink-secondary mb-8 max-w-[62ch]"
+            className="w-full sm:w-auto flex-shrink-0 mb-6"
+          >
+            <div className="border border-hairline bg-canvas/92 backdrop-blur-sm p-1 shadow-[0_10px_28px_rgba(0,67,206,0.06)]">
+              <Countdown targetDate="2027-01-14T09:00:00+05:30" variant="hero" />
+            </div>
+          </motion.div>
+
+          {/* Subtext */}
+          <motion.p
+            custom={4}
+            variants={elementVariants}
+            initial="hidden"
+            animate="visible"
+            className="text-[15px] sm:text-[16px] font-[400] leading-relaxed text-ink-secondary mb-6 max-w-[62ch]"
           >
             The flagship research forum presenting peer-reviewed breakthroughs in artificial intelligence, Internet of Things, and autonomous robotic systems.
           </motion.p>
 
           {/* CTAs */}
           <motion.div
-            custom={4}
+            custom={5}
             variants={elementVariants}
             initial="hidden"
             animate="visible"
-            className="flex flex-row justify-center gap-4 w-full sm:w-auto mb-10"
+            className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 w-full sm:w-auto"
           >
             <a
               href="https://openreview.net"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex h-12 items-center justify-center bg-primary px-6 text-[14px] font-medium text-white transition-colors hover:bg-primary-deep active:bg-primary-press rounded-none"
+              className="inline-flex h-12 items-center justify-center bg-primary px-6 text-[14px] font-medium text-white transition-colors hover:bg-primary-deep active:bg-primary-press rounded-none w-full sm:w-auto"
             >
               Submit Paper
             </a>
             <a
               href="#dates-section"
               onClick={handleScrollToDates}
-              className="inline-flex h-12 items-center justify-center border border-hairline bg-white/75 px-6 text-[14px] font-medium text-ink transition-colors hover:border-primary/40 hover:bg-white rounded-none"
+              className="inline-flex h-12 items-center justify-center border border-hairline bg-white/75 px-6 text-[14px] font-medium text-ink transition-colors hover:border-primary/40 hover:bg-white rounded-none w-full sm:w-auto"
             >
               Important Dates
             </a>
-          </motion.div>
-
-          {/* Countdown below the content */}
-          <motion.div
-            custom={5}
-            variants={elementVariants}
-            initial="hidden"
-            animate="visible"
-            className="w-full sm:w-auto flex-shrink-0 mt-2"
-          >
-            <div className="border border-hairline bg-canvas/92 backdrop-blur-sm p-1 shadow-[0_10px_28px_rgba(0,67,206,0.06)]">
-              <Countdown targetDate="2027-01-14T09:00:00+05:30" variant="hero" />
-            </div>
           </motion.div>
         </div>
       </div>
