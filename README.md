@@ -62,6 +62,11 @@ The repository also hosts the official conference website for the **1st Indrapra
 
 ```
 acm-website/
+├── acm-icps/               # IIC-AIR 2027 Conference website sub-project (Next.js)
+│   ├── app/                # Conference pages (Hero, Venue, Speakers, Committee, tracks, etc.)
+│   ├── components/         # Modular layout, section and shared components
+│   ├── content/            # JSON data files (speakers.json, committee.json, etc.)
+│   └── [README.md](acm-icps/README.md)     # Conference sub-project documentation
 ├── public/                 # Static assets (images, logos, fonts, PDFs)
 │   ├── home/               # Landing page images (optimized WebP format)
 │   ├── team/               # Team member avatars (optimized WebP format)
