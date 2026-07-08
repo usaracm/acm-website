@@ -86,7 +86,9 @@ export default function CommitteePage() {
                       className="p-3.5 border border-hairline bg-canvas-soft flex flex-col gap-1 rounded-none"
                     >
                       <span className="text-[14px] font-semibold text-ink leading-tight">{member.name}</span>
-                      {groupKey !== "tpc" && (
+                      {groupKey === "tpc" ? (
+                        <span className="text-[11px] text-ink-secondary font-[300] leading-none">{member.affiliation}</span>
+                      ) : (
                         <span className="text-[11px] text-ink-secondary font-[300] leading-none">{member.role}</span>
                       )}
                     </div>

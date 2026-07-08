@@ -48,57 +48,49 @@
     "name": "Prof. Nanhay Singh",
     "role": "Advisory Board Member",
     "affiliation": "Netaji Subhash University of Technology East Campus, Delhi",
-    "group": "advisory",
-    "email": "nanhay.singh@nsut.ac.in"
+    "group": "advisory"
   },
   {
     "name": "Prof. Shailender Kumar",
     "role": "Advisory Board Member",
     "affiliation": "Delhi Technological University",
-    "group": "advisory",
-    "email": "shailenderkumar@dce.ac.in"
+    "group": "advisory"
   },
   {
     "name": "Prof. A K Mohapatra",
     "role": "Advisory Board Member",
     "affiliation": "IGDTUW, Delhi",
-    "group": "advisory",
-    "email": "akmohapatra@igdtuw.ac.in"
+    "group": "advisory"
   },
   {
     "name": "Prof. M P Mishra",
     "role": "Advisory Board Member",
     "affiliation": "IGNOU, New Delhi",
-    "group": "advisory",
-    "email": "mpmishra@ignou.ac.in"
+    "group": "advisory"
   },
   {
     "name": "Dr. Karan Singh",
     "role": "Advisory Board Member",
     "affiliation": "Jawaharlal Nehru University, New Delhi",
-    "group": "advisory",
-    "email": "Karan@mail.jnu.ac.in"
+    "group": "advisory"
   },
   {
     "name": "Prof. Manju Khari",
     "role": "Advisory Board Member",
     "affiliation": "Jawaharlal Nehru University, New Delhi",
-    "group": "advisory",
-    "email": "manjukhari@jnu.ac.in"
+    "group": "advisory"
   },
   {
     "name": "Prof. Deo Prakash Vidyarthi",
     "role": "Advisory Board Member",
     "affiliation": "Jawaharlal Nehru University, New Delhi",
-    "group": "advisory",
-    "email": "dpv@mail.jnu.ac.in"
+    "group": "advisory"
   },
   {
     "name": "Prof. Rakesh Kumar Singh",
     "role": "Advisory Board Member",
     "affiliation": "IGDTUW, Delhi",
-    "group": "advisory",
-    "email": "rksingh@igdtuw.ac.in"
+    "group": "advisory"
   },
   {
     "name": "Dr. Ashish Joshi",
@@ -310,14 +302,14 @@
     "email": "renu.usar@ipu.ac.in"
   },
   {
-    "name": "Ms. Manisha Prafulla Parlewar",
+    "name": "Dr. Manisha Prafulla Parlewar",
     "role": "Technical Program Committee",
     "affiliation": "Assistant Professor, USAR",
     "group": "tpc",
     "email": "manisha.usar@ipu.ac.in"
   },
   {
-    "name": "Ms. Chetana Hooda",
+    "name": "Dr. Chetana Hooda",
     "role": "Technical Program Committee",
     "affiliation": "Assistant Professor, USAR",
     "group": "tpc",
@@ -338,7 +330,7 @@
     "email": "jyoti.usar@ipu.ac.in"
   },
   {
-    "name": "Sh. Pushp Kumar Baghel",
+    "name": "Dr. Pushp Kumar Baghel",
     "role": "Technical Program Committee",
     "affiliation": "Assistant Professor, USAR",
     "group": "tpc",
