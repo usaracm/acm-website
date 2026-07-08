@@ -144,9 +144,11 @@ export default function CommitteePage() {
                         )}
                       </div>
                     </div>
-                    <span className={`inline-flex self-start px-2 py-0.5 border text-[10px] font-sans uppercase tracking-wider ${colors.badge}`}>
-                      {member.role}
-                    </span>
+                    {groupKey !== "advisory" && (
+                      <span className={`inline-flex self-start px-2 py-0.5 border text-[10px] font-sans uppercase tracking-wider ${colors.badge}`}>
+                        {member.role}
+                      </span>
+                    )}
                   </div>
                 ))}
               </div>
