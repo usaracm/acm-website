@@ -6,21 +6,25 @@ import { resolveAssetPath } from "@/lib/utils";
 const GROUP_TITLES: Record<string, string> = {
   patron: "Patrons",
   chair: "General Chairs",
+  program_chair: "Program Chairs",
   advisory: "Advisory Board",
   local: "Local Organizing Committee",
   finance: "Finance Committee",
   web_publicity: "Web & Publicity Committee",
   tpc: "Technical Program Committee (TPC)",
+  student_committee: "Student Organizing Committee",
 };
 
 const COLOR_MAP: Record<string, { badge: string; border: string }> = {
   patron: { badge: "bg-primary/10 text-primary border-primary/20", border: "border-primary" },
   chair: { badge: "bg-primary/10 text-primary border-primary/20", border: "border-primary" },
+  program_chair: { badge: "bg-primary/10 text-primary border-primary/20", border: "border-primary" },
   advisory: { badge: "bg-ruby/10 text-ruby border-ruby/20", border: "border-ruby" },
   local: { badge: "bg-lemon/15 text-[#9b6829] border-lemon/30", border: "border-[#9b6829]/30" },
   finance: { badge: "bg-[#24a148]/10 text-[#24a148] border-[#24a148]/20", border: "border-[#24a148]" },
   web_publicity: { badge: "bg-primary/10 text-primary border-primary/20", border: "border-primary" },
   tpc: { badge: "bg-canvas-soft text-ink-secondary border-hairline", border: "border-hairline" },
+  student_committee: { badge: "bg-primary/10 text-primary border-primary/20", border: "border-primary" },
 };
 
 export default function CommitteePage() {
@@ -30,11 +34,13 @@ export default function CommitteePage() {
   const grouped: Record<string, typeof committee> = {
     patron: [],
     chair: [],
+    program_chair: [],
     advisory: [],
     local: [],
     finance: [],
     web_publicity: [],
     tpc: [],
+    student_committee: [],
   };
 
   committee.forEach((member) => {
@@ -61,15 +67,17 @@ export default function CommitteePage() {
           const title = GROUP_TITLES[groupKey];
           const colors = COLOR_MAP[groupKey];
 
-          // TPC is rendered as a clean list/grid of tags to save space, others are cards
-          if (groupKey === "tpc") {
+          // TPC and Student Committee are rendered as a clean list/grid of tags to save space, others are cards
+          if (groupKey === "tpc" || groupKey === "student_committee") {
             return (
               <section key={groupKey} className="flex flex-col gap-5 border-t border-hairline pt-8">
                 <h3 className="text-[20px] font-[300] tracking-[-0.2px] text-ink">
                   {title}
                 </h3>
                 <p className="text-[13px] text-ink-secondary font-[300] -mt-2 leading-relaxed">
-                  Assistant Professors from University School of Automation &amp; Robotics (USAR), GGSIPU.
+                  {groupKey === "tpc" 
+                    ? "Assistant Professors from University School of Automation & Robotics (USAR), GGSIPU."
+                    : "ACM Student Members, GGSIPU EDC ACM Student Chapter."}
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
                   {members.map((member) => (

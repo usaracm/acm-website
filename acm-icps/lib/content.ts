@@ -30,7 +30,7 @@ export const CommitteeMemberSchema = z.object({
   role: z.string(),
   affiliation: z.string(),
   photo: z.string().optional(),
-  group: z.enum(["patron", "chair", "tpc", "advisory", "local", "finance", "web_publicity"]),
+  group: z.enum(["patron", "chair", "tpc", "advisory", "local", "finance", "web_publicity", "program_chair", "student_committee"]),
   email: z.string().optional(),
   contact: z.string().optional(),
 });

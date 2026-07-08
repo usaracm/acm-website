@@ -31,7 +31,7 @@ export default function Timeline({ milestones }: TimelineProps) {
 
       if (isPast) {
         status = "completed";
-      } else if (index === firstUpcomingIndex) {
+      } else if (index === firstUpcomingIndex && currentDate >= milestoneDate) {
         status = "current";
       }
 
