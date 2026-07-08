@@ -22,6 +22,14 @@
 
 This platform serves as a central hub for the **GGSIPU East Delhi Campus ACM Student Chapter**, showcasing events, technical blogs, collaborative projects, and team directories. Built with next-generation aesthetics (dark-themed glassmorphism), fluid animations, and mobile responsiveness.
 
+### 🌐 IIC-AIR 2027 Conference Website
+
+The repository also hosts the official conference website for the **1st Indraprastha International Conference on Artificial Intelligence, IoT & Robotics (IIC-AIR 2027)**, organized by the GGSIPU EDC ACM Student Chapter at USAR.
+
+- **Conference Site Live URL:** [usar.acm.org/iic-air/](https://usar.acm.org/iic-air/)
+- **Sub-Project Location:** `/acm-icps`
+- **Sub-Project Tech Stack:** Next.js 16 (App Router, Static Exporting, custom IBM Design Language system)
+
 ---
 
 ## Key Features
@@ -54,6 +62,11 @@ This platform serves as a central hub for the **GGSIPU East Delhi Campus ACM Stu
 
 ```
 acm-website/
+├── acm-icps/               # IIC-AIR 2027 Conference website sub-project (Next.js)
+│   ├── app/                # Conference pages (Hero, Venue, Speakers, Committee, tracks, etc.)
+│   ├── components/         # Modular layout, section and shared components
+│   ├── content/            # JSON data files (speakers.json, committee.json, etc.)
+│   └── [README.md](acm-icps/README.md)     # Conference sub-project documentation
 ├── public/                 # Static assets (images, logos, fonts, PDFs)
 │   ├── home/               # Landing page images (optimized WebP format)
 │   ├── team/               # Team member avatars (optimized WebP format)
@@ -96,11 +109,19 @@ cd ACM-Website
 npm install
 ```
 
-### 3. Run Development Server
+### 3. Run Development Servers
+
+To run the main website development server:
 ```bash
 npm run dev
 ```
-Open [http://localhost:3000](http://localhost:3000) in your browser to view the live hot-reloaded development environment.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+To run the IIC-AIR conference website development server:
+```bash
+npm run dev --prefix acm-icps
+```
+Open [http://localhost:3001/iic-air/](http://localhost:3001/iic-air/) in your browser.
 
 ---
 
@@ -119,13 +140,18 @@ node scripts/optimize-images.mjs
 
 ## Build & Deployment
 
-To compile the application into fully optimized static pages (saved under the `/out` folder):
+To compile both the main website and the IIC-AIR conference website into a unified production-ready folder (saved under the root `/out` folder):
 
 ```bash
 npm run build
 ```
 
-This output directory (`out/`) is standalone and can be directly uploaded to cPanel, Netlify, Vercel, or any other static file server.
+This build script executes the following sequence:
+1. Builds the main website pages into `/out`.
+2. Builds the conference sub-project (`/acm-icps`) with its configured basePath (`/iic-air`) into `/acm-icps/out`.
+3. Copies the conference static site files into the main output folder at `/out/iic-air`.
+
+This consolidated directory (`out/`) is standalone and can be directly uploaded to cPanel, Netlify, Vercel, or any other static file server.
 
 ---
 
