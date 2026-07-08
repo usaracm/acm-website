@@ -33,5 +33,17 @@
       "email": "apandita@amityuniversity.ae",
       "scholar": "https://scholar.google.com/citations?user=TLNDcCYAAAAJ&hl=en"
     }
+  },
+  {
+    "name": "Dr. Sandhya Aneja",
+    "title": "Assistant Professor of Computer Science",
+    "institution": "Marist University",
+    "photo": "/speakers/Sandhya-Aneja.jpeg",
+    "researchArea": "Computer Networks, Security, Deep Learning, Machine Learning",
+    "bio": "Dr. Sandhya Aneja is a researcher, inventor, and computer scientist with a strong passion for teaching. She is also a Visiting Research Scholar at Purdue University and has over 15 years of experience teaching computer science to undergraduate and graduate students. Her work focuses on mobile and wireless network systems, high-performance computing, and deep convolutional neural networks.",
+    "links": {
+      "scholar": "https://scholar.google.com/citations?user=poAh_T8AAAAJ&hl=en",
+      "site": "https://www.marist.edu/computer-science-math/faculty/sandhya-aneja"
+    }
   }
 ]
