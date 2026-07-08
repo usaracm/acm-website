@@ -346,61 +346,73 @@
   },
   {
     "name": "Shivam",
-    "role": "Student Organizer (Chair, ACM Chapter)",
+    "role": "Student Organizer",
     "affiliation": "USAR, GGSIPU",
     "group": "student_committee"
   },
   {
     "name": "Sheelendra",
-    "role": "Student Organizer (Vice Chair, ACM Chapter)",
+    "role": "Student Organizer",
     "affiliation": "USAR, GGSIPU",
     "group": "student_committee"
   },
   {
     "name": "Arsh Ahmad",
-    "role": "Student Organizer (Secretary, ACM Chapter)",
+    "role": "Student Organizer",
     "affiliation": "USAR, GGSIPU",
     "group": "student_committee"
   },
   {
     "name": "Prabhakar",
-    "role": "Student Organizer (Treasurer, ACM Chapter)",
+    "role": "Student Organizer",
     "affiliation": "USAR, GGSIPU",
     "group": "student_committee"
   },
   {
     "name": "Aniket Kumar",
-    "role": "Student Organizer (Membership Chair)",
+    "role": "Student Organizer",
     "affiliation": "USAR, GGSIPU",
     "group": "student_committee"
   },
   {
     "name": "Abhijith KS",
-    "role": "Student Organizer (Web Master)",
+    "role": "Student Organizer",
     "affiliation": "USAR, GGSIPU",
     "group": "student_committee"
   },
   {
-    "name": "Shantanu Ojha",
-    "role": "Student Organizer (ML Lead)",
+    "name": "Yashvardhan Singh",
+    "role": "Student Organizer",
     "affiliation": "USAR, GGSIPU",
     "group": "student_committee"
   },
   {
-    "name": "Ritwik Mittal",
-    "role": "Student Organizer (DSA Lead)",
+    "name": "Bhavya Jain",
+    "role": "Student Organizer",
     "affiliation": "USAR, GGSIPU",
     "group": "student_committee"
   },
   {
-    "name": "Utkarsh Yadav",
-    "role": "Student Organizer (Design Lead)",
+    "name": "Krishan Dubey",
+    "role": "Student Organizer",
     "affiliation": "USAR, GGSIPU",
     "group": "student_committee"
   },
   {
-    "name": "Shanvi Gulia",
-    "role": "Student Organizer (Content Lead)",
+    "name": "Piysh Kumar",
+    "role": "Student Organizer",
+    "affiliation": "USAR, GGSIPU",
+    "group": "student_committee"
+  },
+  {
+    "name": "Arnav Kadam",
+    "role": "Student Organizer",
+    "affiliation": "USAR, GGSIPU",
+    "group": "student_committee"
+  },
+  {
+    "name": "Abhishek",
+    "role": "Student Organizer",
     "affiliation": "USAR, GGSIPU",
     "group": "student_committee"
   }

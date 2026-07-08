@@ -33,8 +33,8 @@ export default function CommitteePage() {
   // Group committee members
   const grouped: Record<string, typeof committee> = {
     patron: [],
-    chair: [],
     program_chair: [],
+    chair: [],
     advisory: [],
     local: [],
     finance: [],
