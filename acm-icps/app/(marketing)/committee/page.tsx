@@ -86,7 +86,9 @@ export default function CommitteePage() {
                       className="p-3.5 border border-hairline bg-canvas-soft flex flex-col gap-1 rounded-none"
                     >
                       <span className="text-[14px] font-semibold text-ink leading-tight">{member.name}</span>
-                      <span className="text-[11px] text-ink-secondary font-[300] leading-none">{member.role}</span>
+                      {groupKey !== "tpc" && (
+                        <span className="text-[11px] text-ink-secondary font-[300] leading-none">{member.role}</span>
+                      )}
                     </div>
                   ))}
                 </div>
@@ -144,7 +146,7 @@ export default function CommitteePage() {
                         )}
                       </div>
                     </div>
-                    {groupKey !== "advisory" && (
+                    {(groupKey === "patron" || groupKey === "finance") && (
                       <span className={`inline-flex self-start px-2 py-0.5 border text-[10px] font-sans uppercase tracking-wider ${colors.badge}`}>
                         {member.role}
                       </span>
