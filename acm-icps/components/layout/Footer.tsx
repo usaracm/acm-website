@@ -123,7 +123,7 @@ export default function Footer() {
             Surajmal Vihar, Delhi-110032
           </address>
 
-          {/* IEEE Sustainability Initiative */}
+          {/* ACM Sustainability Initiative */}
           <div className="mt-8 pt-6 border-t border-white/10 flex flex-col gap-3">
             <div className="flex items-center gap-2">
               <div className="h-5 w-5 flex items-center justify-center bg-[#24a148]/15 rounded-none shrink-0">
@@ -133,11 +133,11 @@ export default function Footer() {
                 </svg>
               </div>
               <span className="font-sans text-[10px] font-semibold uppercase tracking-[0.15em] text-[#24a148]">
-                IEEE Sustainability Initiative
+                ACM Sustainability Initiative
               </span>
             </div>
             <p className="text-[11px] leading-relaxed font-[300]">
-              IIC-AIR 2027 supports IEEE&apos;s Sustainability Initiative by promoting sustainable practices and technologies across computing systems.
+              IIC-AIR 2027 supports ACM&apos;s focus on sustainable computing by promoting sustainable practices and technologies across computing systems.
             </p>
           </div>
         </div>

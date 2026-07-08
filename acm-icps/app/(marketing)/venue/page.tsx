@@ -49,12 +49,13 @@ export default function VenuePage() {
         <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-white/90 via-[#f5f9ff]/85 to-transparent" />
         {/* Overlay text */}
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
-          <div className="bg-white/88 backdrop-blur-[2px] px-6 py-4 border border-white/90">
-            <span className="font-sans text-[10px] uppercase tracking-[0.2em] text-ink mb-3 block">Conference Venue</span>
-            <h1 className="text-[28px] sm:text-[42px] font-[400] text-ink tracking-[-0.5px] leading-tight max-w-xl">
-              University School of Automation<br />& Robotics
+          <div className="w-full max-w-3xl bg-white/85 border border-white/80 backdrop-blur-[4px] px-6 py-6 sm:px-12 sm:py-8">
+            <span className="font-sans text-[10px] uppercase tracking-[0.2em] text-ink mb-3 block">CONFERENCE VENUE</span>
+            <h1 className="text-[24px] sm:text-[38px] font-[500] text-ink tracking-tight leading-tight uppercase">
+              University School of<br />
+              <span className="text-primary block sm:inline">Automation & Robotics</span>
             </h1>
-            <p className="text-[14px] text-ink font-[400] mt-3">
+            <p className="text-[11px] sm:text-[12px] text-ink-secondary font-[400] mt-4 uppercase tracking-widest">
               Guru Gobind Singh Indraprastha University, East Delhi Campus
             </p>
           </div>
@@ -91,7 +92,7 @@ export default function VenuePage() {
                 Host School
               </span>
               <span className="text-[14px] leading-relaxed text-ink-secondary font-[300]">
-                University School of Automation<br />& Robotics (USAR)
+                University School of<br />Automation & Robotics (USAR)
               </span>
               <span className="inline-block mt-1 font-sans text-[10px] uppercase tracking-wider text-[#24a148] border border-[#24a148]/30 bg-[#24a148]/5 px-2 py-1 self-start sm:self-end rounded-none">
                 Active Venue

@@ -67,11 +67,11 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 3. IEEE Sustainability Initiative Strip */}
+      {/* 3. ACM Sustainability Initiative Strip */}
       <section className="py-4 bg-[#24a148]/10 border-b border-[#24a148]/20">
         <div className="mx-auto max-w-7xl px-6 flex flex-col sm:flex-row items-center justify-center sm:justify-between gap-3">
           <div className="flex items-center gap-3">
-            {/* IEEE Leaf icon */}
+            {/* ACM Leaf icon */}
             <div className="h-7 w-7 rounded-none bg-[#24a148]/20 flex items-center justify-center shrink-0">
               <svg className="h-4 w-4 text-[#24a148]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M4 16s1-1 3-1 4 2 6 2 3-1 3-1V4s-1 1-3 1-4-2-6-2-3 1-3 1z" />
@@ -80,16 +80,16 @@ export default function HomePage() {
             </div>
             <div className="flex items-center gap-2 flex-wrap justify-center sm:justify-start">
               <span className="font-sans text-[10px] font-semibold uppercase tracking-[0.2em] text-[#24a148]">
-                IEEE Sustainability Initiative
+                ACM Sustainability Initiative
               </span>
               <span className="hidden sm:inline h-3 w-px bg-[#24a148]/30" />
               <span className="text-[12px] text-ink-secondary font-[300]">
-                IIC-AIR 2027 supports IEEE&apos;s Sustainability Initiative — promoting sustainable practices and technologies across computing systems.
+                IIC-AIR 2027 supports ACM&apos;s Sustainability Initiative — promoting sustainable practices and technologies across computing systems.
               </span>
             </div>
           </div>
           <a
-            href="https://www.ieee.org/about/corporate/sustainability.html"
+            href="https://www.acm.org/"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-1.5 text-[11px] font-sans uppercase tracking-wider text-[#24a148] hover:text-[#1a7a38] transition-colors shrink-0"
