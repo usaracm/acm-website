@@ -16,7 +16,7 @@ export default function HomePage() {
   const stats = [
     { label: "Technical Tracks", value: 4 },
     { label: "Keynote Panels", value: 5, suffix: "+" },
-    { label: "Submitted Papers", value: 120, suffix: "+" },
+    { label: "Technical Reviewers", value: 50, suffix: "+" },
     { label: "Days Conference", value: 2 },
   ];
 
