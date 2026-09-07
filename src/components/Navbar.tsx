@@ -11,9 +11,9 @@ const NAV_ITEMS = [
   { label: "Projects", number: "4.0", href: "/projects" },
   { label: "Blogs", number: "5.0", href: "/blogs" },
   {
-    label: "IIC-AIR",
+    label: "SquidGame",
     number: "6.0",
-    href: "/iic-air/",
+    href: "/squids",
     special: true,
     external: true,
   },
