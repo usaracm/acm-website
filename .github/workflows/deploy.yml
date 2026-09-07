@@ -24,7 +24,6 @@ jobs:
       - name: Install Dependencies
         run: |
           npm ci
-          npm ci --prefix acm-icps
 
       - name: Run Build (Static Export)
         run: npm run build
