@@ -22,9 +22,7 @@ jobs:
           cache: 'npm'
 
       - name: Install Dependencies
-        run: |
-          npm ci
-          npm ci --prefix acm-icps
+        run: npm ci
 
       - name: Run Build (Static Export)
         run: npm run build
