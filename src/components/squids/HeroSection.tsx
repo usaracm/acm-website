@@ -121,13 +121,22 @@ export default function HeroSection({
           <CountdownTimer targetDate={challengeEndDate} />
         </motion.div>
 
-        {/* Rules Modal CTA Button */}
+        {/* Register + Rules CTA Buttons */}
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.6 }}
-          className="mt-6"
+          className="mt-6 flex items-center gap-4"
         >
+          <a
+            href="https://forms.gle/XGNV6UDumY3wNf9M8"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 px-6 py-2.5 rounded-xl bg-[#ff2e88] text-black font-mono text-xs font-bold tracking-[0.2em] uppercase hover:bg-[#ff2e88]/80 transition-all"
+          >
+            REGISTER NOW
+          </a>
+
           <button
             onClick={() => setIsRulesOpen(true)}
             className="flex items-center gap-2 px-6 py-2.5 rounded-xl border border-[#ff2e88]/30 bg-black/50 text-white font-mono text-xs tracking-[0.2em] uppercase hover:bg-[#ff2e88]/10 hover:border-[#ff2e88] transition-all"

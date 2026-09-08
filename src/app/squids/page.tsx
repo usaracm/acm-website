@@ -14,27 +14,7 @@ export default async function SquidsPage() {
     contestUrl: ""
   };
 
-  try {
-    const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000';
-    const res = await fetch(`${apiUrl}/api/squid-stats`, {
-      cache: 'no-store' 
-    });
-
-    if (res.ok) {
-      const data = await res.json();
-      stats = {
-        survivorCount: data.survivorCount ?? stats.survivorCount,
-        eliminatedCount: data.eliminatedCount ?? stats.eliminatedCount,
-        totalPlayers: data.totalPlayers ?? stats.totalPlayers,
-        contestUrl: data.contestUrl ?? stats.contestUrl
-      };
-    } else {
-      console.error("Failed to fetch from backend. Status:", res.status);
-    }
-  } catch (error) {
-    const message = error instanceof Error ? error.message : String(error);
-    console.error("Backend fetch failed. Is the server running?", message);
-  }
+  
 
   return (
     <main className="bg-black min-h-screen">
