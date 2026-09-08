@@ -23,7 +23,7 @@ export default function HeroSection({
   contestUrl = '' 
 }: HeroSectionProps) {
   const [isRulesOpen, setIsRulesOpen] = useState(false);
-  const challengeEndDate = '2026-09-10T00:00:01';
+  const challengeEndDate = '2026-09-12T00:00:01';
 
   const stats = [
     { label: 'SURVIVORS', value: survivorCount, color: 'text-[#00c7a5]' },
